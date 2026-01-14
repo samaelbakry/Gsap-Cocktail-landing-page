@@ -1,24 +1,27 @@
 import gsap from "gsap";
-import logoImage from "/images/logo.png"
+import logoImage from "/images/logo.png";
 import { useGSAP } from "@gsap/react";
 
 export default function Navbar() {
-    useGSAP(()=>{
-        const tween = gsap.timeline({
-            scrollTrigger:{
-            trigger:"nav",
-            start:"bottom top"
-            }})
-            tween.fromTo("nav" ,{ backgroundColor:"transparent" },
+  useGSAP(() => {
+    const tween = gsap.timeline({
+      scrollTrigger: {
+        trigger: "nav",
+        start: "bottom top",
+      },
+    });
+    tween.fromTo(
+      "nav",
+      { backgroundColor: "transparent" },
 
-                { backgroundColor:"#00000050",
-                backgroundFilter:"blur(10px)",
-                duration:"1s",
-                ease:"power2"
-                }
-            )
-        
-    },[])
+      {
+        backgroundColor: "#00000050",
+        backgroundFilter: "blur(10px)",
+        duration: "1s",
+        ease: "power1.inOut",
+      }
+    );
+  }, []);
   const links = [
     {
       id: "cocktails",
@@ -48,13 +51,12 @@ export default function Navbar() {
           <ul>
             {links.map((link) => (
               <li key={link.id}>
-                <a  href={`${link.id}`}>{link.title}</a>
+                <a href={`${link.id}`}>{link.title}</a>
               </li>
             ))}
           </ul>
         </div>
       </nav>
-     
     </>
   );
 }
