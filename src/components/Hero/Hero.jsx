@@ -78,7 +78,7 @@ export default function Hero() {
           alt="right-leaf"
           className="right-leaf"
         />
-       <div className="body">
+       <div className="body mx-auto max-w-7xl">
           <div className="content">
             <div className="space-y-5 hidden md:block">
               <p className="capitalize">cool . classic . crisp</p>
@@ -98,7 +98,7 @@ export default function Hero() {
         </div>
       </section>
 
-        <div className="video absolute inset-0">
+        <div className="video inset-0">
         <video 
         src="/videos/output.mp4"
         ref={videoRef}
@@ -112,4 +112,5 @@ export default function Hero() {
     </>
   );
 }
+
 
