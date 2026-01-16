@@ -4,6 +4,7 @@ import Cocktails from "./components/Cocktails/Cocktails";
 import About from "./components/About/About";
 import Art from "./components/Art/Art";
 import Menu from "./components/Menu/Menu";
+import Contact from "./components/Contact/Contact";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <About/>
         <Art/>
         <Menu/>
+        <Contact/>
       </main>
     </>
   );
